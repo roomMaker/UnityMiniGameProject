@@ -22,9 +22,10 @@ public class PlayerInteract : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == layerMasks.ToString())
+        if (collision.gameObject.layer == )
         {
             PopupObject.SetActive(true);
+
 
         }
         else
