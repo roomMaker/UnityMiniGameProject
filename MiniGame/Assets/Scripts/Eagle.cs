@@ -13,10 +13,10 @@ public class Eagle : MonoBehaviour
     IEnumerator EAGLE_Updown()
     {
         elapsedTime += Time.deltaTime;
-        if(elapsedTime > 1f)
+        if(elapsedTime > 3f)
         {
             elapsedTime = 0f;
-            gameObject.transform.position = Vector2.left * elapsedTime;
+            gameObject.transform.position = Vector2.one * elapsedTime;
         }
 
         yield return new WaitForSeconds(elapsedTime);
