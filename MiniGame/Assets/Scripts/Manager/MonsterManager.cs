@@ -16,13 +16,14 @@ public class MonsterManager : MonoBehaviour
     //지난 시간
     private float elapsedTime = 0f;
     //횟수 제한 카운트
-    private float _count = 0;
+    private float _eagleCount = 0;
+    private float _ratCount = 0;
 
     // 코루틴 스타트
     private void Start()
     {
         StartCoroutine(EAGLE_Updown());
-        //StartCoroutine(RatMove());
+        StartCoroutine(RatMoving());
     }
 
     // 독수리 위, 아래로 이동하는 코루틴
@@ -33,16 +34,33 @@ public class MonsterManager : MonoBehaviour
         {
             Eagle.transform.Translate(new Vector2(0f, MoveSpeed * Time.fixedDeltaTime));
 
-            _count++;
+            _eagleCount++;
 
-            if(_count > 200)
+            if (_eagleCount > 200)
             {
-                _count = 0;
-                MoveSpeed *= -1;    
+                _eagleCount = 0;
+                MoveSpeed *= -1;
             }
             yield return new WaitForSeconds(0.001f);
         }
     }
 
-    
+    // 쥐 움직임
+    IEnumerator RatMoving()
+    {
+        while (true)
+        {
+            Rat.transform.Translate(new Vector2(-MoveSpeed * Time.fixedDeltaTime, 0f));
+            _ratCount++;
+
+            if (_ratCount > 1000)
+            {
+                _ratCount = 0;
+                MoveSpeed *= -1;
+            }
+            yield return new WaitForSeconds(0.005f);
+        }
+    }
+
+
 }
