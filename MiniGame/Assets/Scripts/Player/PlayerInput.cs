@@ -6,36 +6,29 @@ using UnityEngine.UI;
 
 public class PlayerInput : MonoBehaviour
 {
-    // PlayerMove ½ºÅ©¸³Æ®¿¡¼­ ¹Ş¾Æ ¿Ã ÁÂ ¿ì Å°°ª º¯¼ö
+    // PlayerMove ìŠ¤í¬ë¦½íŠ¸ì—ì„œ ë°›ì•„ ì˜¬ ì¢Œ ìš° í‚¤ê°’ ë³€ìˆ˜
     public float MoveX;
 
     [SerializeField]
     private PlayerInteract _PlayerInteract;
-
-    
-
-    // ÀÏ´Ü ´ë·«ÀûÀ¸·Î ÇÑ °ÍÀÌ´Ï º»ÀÎ ÀÔ¸À´ë·Î ¼öÁ¤ ÇÏ¼Åµµ µË´Ï´Ù. ´ë½Å, ¼öÁ¤ÇÏ½Ç ¶§´Â ÆÀ¿øÀ»¿¡°Ô ²À ¸»¾¸ÇØÁÖ¼¼¿ä
+    // ì¼ë‹¨ ëŒ€ëµì ìœ¼ë¡œ í•œ ê²ƒì´ë‹ˆ ë³¸ì¸ ì…ë§›ëŒ€ë¡œ ìˆ˜ì • í•˜ì…”ë„ ë©ë‹ˆë‹¤. ëŒ€ì‹ , ìˆ˜ì •í•˜ì‹¤ ë•ŒëŠ” íŒ€ì›ì„ì—ê²Œ ê¼­ ë§ì”€í•´ì£¼ì„¸ìš”
     private void FixedUpdate()
     {
-        // »óÈ£ÀÛ¿ë Å° ´­·¶À» °æ¿ì
-        if(Input.GetKeyDown(KeyCode.E))
+        // ìƒí˜¸ì‘ìš© í‚¤ ëˆŒë €ì„ ê²½ìš°
+        if (Input.GetKeyDown(KeyCode.E))
         {
             _PlayerInteract.InteractObject();
         }
 
-        // Á¡ÇÁ Å° ´­·¶À» °æ¿ì
-        if(Input.GetKeyDown(KeyCode.Space))
+        // ì í”„ í‚¤ ì²˜ë¦¬ ì‚­ì œ => PlayerMove ìŠ¤í¬ë¦½íŠ¸ë¡œ ì´ë™
+
+        // ê²Œì„ì˜¤ë²„ ì²˜ë¦¬
+        if (Input.GetKeyDown(KeyCode.R))
         {
 
         }
 
-        // °ÔÀÓ¿À¹ö Ã³¸®
-        if(Input.GetKeyDown(KeyCode.R))
-        {
-
-        }
-
-        // ÁÂ ¿ì °ª ¹Ş¾Æ¼­ MoveX¿¡ ¾÷µ¥ÀÌÆ®
-        MoveX = Input.GetAxis("Horizontal");
+        // ì¢Œ ìš° ê°’ ë°›ì•„ì„œ MoveXì— ì—…ë°ì´íŠ¸
+        MoveX = Input.GetAxisRaw("Horizontal");
     }
 }
