@@ -4,12 +4,12 @@ using UnityEngine;
 using UnityEngine.Events;
 public class Interactable : MonoBehaviour
 {
-    public UnityEvent onInteract;
-    public int ItemCode;
+    [SerializeField]
+    private UnityEvent onInteract;
 
-    // Start is called before the first frame update
-    void Start()
+    virtual public void ActivateObject()
     {
-        ItemCode = Random.Range(0, 1000000);
+
     }
 }
+

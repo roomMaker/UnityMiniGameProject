@@ -15,9 +15,13 @@ public class PlayerInput : MonoBehaviour
     private void FixedUpdate()
     {
         // 상호작용 키 눌렀을 경우
+        // 상호작용이 되는 오브젝트를 만났냐?
         if (Input.GetKeyDown(KeyCode.E))
         {
-            _PlayerInteract.InteractObject();
+            if (_PlayerInteract.GetInteractable()!=null)
+            {
+                _PlayerInteract.GetInteractable().ActivateObject();
+            }
         }
 
 
