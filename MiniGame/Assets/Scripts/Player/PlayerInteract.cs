@@ -8,20 +8,20 @@ using UnityEngine.UI;
 
 public class PlayerInteract : MonoBehaviour
 {
-    //ÇÃ·¹ÀÌ¾î°¡ ·¹ÀÌ¾î¿¡ ´ê¾ÒÀ»¶§ ¶ß´Â ÅØ½ºÆ®+ÆĞ³Î
+    //í”Œë ˆì´ì–´ê°€ ë ˆì´ì–´ì— ë‹¿ì•˜ì„ë•Œ ëœ¨ëŠ” í…ìŠ¤íŠ¸+íŒ¨ë„
     public Text Popuptext;
     public GameObject PopupObject;
-    //»óÈ£ÀÛ¿ëÀÌ ÇÊ¿äÇÑ ·¹ÀÌ¾î ¹è¿­
+    //ìƒí˜¸ì‘ìš©ì´ í•„ìš”í•œ ë ˆì´ì–´ ë°°ì—´
     public LayerMask[] layerMasks;
-    //¿ÀºêÁ§Æ® »óÈ£ÀÛ¿ë
+    //ì˜¤ë¸Œì íŠ¸ ìƒí˜¸ì‘ìš©
     public Interactable Interactable;
-    //»óÈ£ÀÛ¿ëÀÌ µÇ´Â°ÍÀÎ°¡?
+    //ìƒí˜¸ì‘ìš©ì´ ë˜ëŠ”ê²ƒì¸ê°€?
     public bool IsInteractOK;
 
 
-    // À¯´ÏÆ¼ ÀÌº¥Æ®
+    // ìœ ë‹ˆí‹° ì´ë²¤íŠ¸
     private UnityEvent _Interact;
-
+    
     private void Awake()
     {
         IsInteractOK = false;
@@ -31,7 +31,7 @@ public class PlayerInteract : MonoBehaviour
 
     }
 
-    //Æ®¸®°Å ¾È¿¡ µé¾î¿ÔÀ»¶§ »óÈ£ÀÛ¿ëÀÌ µÇ´Â ·¹ÀÌ¾îÀÎ°¡ ºñ±³ ÈÄ ÆĞ³Î ÆË¾÷
+    //íŠ¸ë¦¬ê±° ì•ˆì— ë“¤ì–´ì™”ì„ë•Œ ìƒí˜¸ì‘ìš©ì´ ë˜ëŠ” ë ˆì´ì–´ì¸ê°€ ë¹„êµ í›„ íŒ¨ë„ íŒì—…
     private void OnTriggerEnter2D(Collider2D collision)
     {
         for(int i = 0; i < layerMasks.Length; i++)
@@ -50,7 +50,7 @@ public class PlayerInteract : MonoBehaviour
         }
     }
 
-    //»óÈ£ ÀÛ¿ë
+    //ìƒí˜¸ ì‘ìš©
     public void InteractObject()
     {
         _Interact.Invoke();
