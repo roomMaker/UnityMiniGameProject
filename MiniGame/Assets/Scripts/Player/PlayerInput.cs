@@ -20,15 +20,20 @@ public class PlayerInput : MonoBehaviour
             _PlayerInteract.InteractObject();
         }
 
+
+
         // 점프 키 처리 삭제 => PlayerMove 스크립트로 이동
 
         // 게임오버 처리
+
         if (Input.GetKeyDown(KeyCode.R))
         {
 
         }
 
+
         // 좌 우 값 받아서 MoveX에 업데이트
+
         MoveX = Input.GetAxisRaw("Horizontal");
     }
 }
