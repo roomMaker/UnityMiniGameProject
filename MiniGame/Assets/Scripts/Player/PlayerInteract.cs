@@ -20,19 +20,19 @@ public class PlayerInteract : MonoBehaviour
     static private UnityEvent _interact;
 
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.layer == )
-        {
-            PopupObject.SetActive(true);
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (collision.gameObject.layer == )
+    //    {
+    //        PopupObject.SetActive(true);
 
 
-        }
-        else
-        {
-            PopupObject.SetActive(false);
-        }
-    }
+    //    }
+    //    else
+    //    {
+    //        PopupObject.SetActive(false);
+    //    }
+    //}
 
     public void InteractObject()
     {
