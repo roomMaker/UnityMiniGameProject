@@ -6,7 +6,7 @@ public class InteractableMushroom : Interactable
 {
     public override void ActivateObject()
     {
-        Destroy(this.gameObject);
+        GameManager.Instance.PlayerDie();
         Debug.Log("╬савю╫");
     }
 }

@@ -80,7 +80,7 @@ public class PlayerMove : MonoBehaviour
     private void Jump()
     {
         // 스페이스 키가 눌리고, 현재 점프 상태가 아닐 때
-        if (Input.GetKeyDown(KeyCode.Space) && _isJump == false)
+        if (Input.GetKey(KeyCode.Space) && _isJump == false)
         {
             _animator.SetBool("IsJump", true);
             _isJump = true;
