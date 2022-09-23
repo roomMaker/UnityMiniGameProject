@@ -10,7 +10,7 @@ public class PlayerInteract : SingletonBehaviour<GameManager>
     //플레이어가 레이어에 닿았을때 뜨는 텍스트+패널
 
     //상호작용 가능한 오브젝트별 텍스트변화
-    [Header("상호작용 가능한 오브젝트별 텍스트변화")]
+    [Header("상호작용 가능한 오브젝트&텍스트변화")]
     public string[] Tags;
     public string[] ChageText;
     //상호작용이 되는것인가?
@@ -18,7 +18,7 @@ public class PlayerInteract : SingletonBehaviour<GameManager>
 
     private Interactable _tempInteractable;
 
-    [Header("팝업")]
+    [Header("상호작용 UI 팝업")]
     [SerializeField]
     private Text _popuptext;
     [SerializeField]

@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InteractableMushroom : Interactable
+public class InteractableMushroom : Interactable 
 {
     public override void ActivateObject()
     {
         Destroy(this.gameObject);
         Debug.Log("¾ÓÁ×À½");
+        GameManager.Instance.PlayerDie();
     }
 }
