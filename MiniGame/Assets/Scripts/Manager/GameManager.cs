@@ -35,6 +35,7 @@ public class GameManager : SingletonBehaviour<GameManager>
         Player.GetComponent<Rigidbody2D>().drag = 10000f;
         yield return new WaitForSeconds(0.4f);
         Player.GetComponent<Rigidbody2D>().drag = 0f;
-        Player.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 30f * Time.deltaTime, ForceMode2D.Impulse);
+        Player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        Player.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 15f, ForceMode2D.Impulse);
     }
 }
