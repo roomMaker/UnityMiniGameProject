@@ -34,7 +34,7 @@ public class MonsterManager : MonoBehaviour
     private float _ratCount = 0;
 
     // 개구리 점프 왼쪽, 오른쪽 상태
-    private bool _isFrogLeftJump = false;
+    private bool _isFrogJump = false;
 
     // 컴포넌트 가져오기
     private SpriteRenderer _spriteRenderer_rat;
@@ -94,34 +94,14 @@ public class MonsterManager : MonoBehaviour
     {
         while (true)
         {
-            _elapsedTime += Time.fixedDeltaTime;
-            Debug.Log($"현재 : {_elapsedTime}초");
-
-            if (_isFrogLeftJump)
-            {
-                _animator.SetBool("IsJump", true);
-                _spriteRenderer_frog.flipX = true;
-
-            }
-            else
-            {
-                _animator.SetBool("IsIdle", true);
-                _spriteRenderer_frog.flipX = false;
-            }
-
-            // 왼쪽으로 점프! 
-            if (_isFrogLeftJump)
-            {
-                _rigidbody_frog.AddForce(new Vector2(FrogMoveRange, FrogJumpRange), ForceMode2D.Impulse);
-                _isFrogLeftJump = false;
-            }
-            // 오른쪽으로 점프!
-            else
-            {
-                _rigidbody_frog.AddForce(new Vector2(-FrogMoveRange, FrogJumpRange), ForceMode2D.Impulse);
-                _isFrogLeftJump = true;
-            }
-            yield return new WaitForSeconds(2f);
+            FrogMoveRange *= -1;
+            _spriteRenderer_frog.flipX = !_spriteRenderer_frog.flipX;
+            _rigidbody_frog.AddForce(new Vector2(FrogMoveRange, FrogJumpRange), ForceMode2D.Impulse);
+            
+            _animator.SetBool("IsJump", true);
+            yield return new WaitForSeconds(1f);
+            _animator.SetBool("IsJump", false);
+            yield return new WaitForSeconds(4f);
         }
     }
 }
