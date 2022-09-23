@@ -12,7 +12,9 @@ public class MonsterManager : MonoBehaviour
     // 독수리의 움직임 범위
     public float EagleMoveRange = 200f;
     // 개구리 점프 높이
-    public float FrogJumpRange = 10f;
+    public float FrogJumpRange = 15f;
+    // 개구리 이동 반경
+    public float FrogMoveRange = 4f;
 
     // 독수리 오브젝트
     [SerializeField]
@@ -94,34 +96,32 @@ public class MonsterManager : MonoBehaviour
         {
             _elapsedTime += Time.fixedDeltaTime;
             Debug.Log($"현재 : {_elapsedTime}초");
-            // 왼쪽으로 점프! 
+
             if (_isFrogLeftJump)
             {
                 _animator.SetBool("IsJump", true);
                 _spriteRenderer_frog.flipX = true;
 
-                if (_elapsedTime > 0.01)
-                {
-                    _rigidbody_frog.AddForce(Vector2.up * FrogJumpRange, ForceMode2D.Impulse);
-                    Frog.transform.Translate(new Vector2(1f, 0f));
-                }
-                    _isFrogLeftJump = false;
             }
-            // 오른쪽으로 점프!
             else
             {
                 _animator.SetBool("IsIdle", true);
                 _spriteRenderer_frog.flipX = false;
+            }
 
-                if (_elapsedTime > 0.05)
-                {
-                    _elapsedTime = 0f;
-                    _rigidbody_frog.AddForce(Vector2.up * FrogJumpRange, ForceMode2D.Impulse);
-                    Frog.transform.Translate(new Vector2(-1f, 0f));
-                }
+            // 왼쪽으로 점프! 
+            if (_isFrogLeftJump)
+            {
+                _rigidbody_frog.AddForce(new Vector2(FrogMoveRange, FrogJumpRange), ForceMode2D.Impulse);
+                _isFrogLeftJump = false;
+            }
+            // 오른쪽으로 점프!
+            else
+            {
+                _rigidbody_frog.AddForce(new Vector2(-FrogMoveRange, FrogJumpRange), ForceMode2D.Impulse);
                 _isFrogLeftJump = true;
             }
-            yield return new WaitForSeconds(3.2f);
+            yield return new WaitForSeconds(2f);
         }
     }
 }

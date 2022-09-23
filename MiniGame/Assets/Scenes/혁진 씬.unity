@@ -1098,7 +1098,7 @@ MonoBehaviour:
   MoveSpeed: 1
   RatMoveRange: 200
   EagleMoveRange: 200
-  FrogJumpRange: 10
+  FrogJumpRange: 4
   Eagle: {fileID: 2074768347}
   Rat: {fileID: 200492172}
   Frog: {fileID: 124097090}
