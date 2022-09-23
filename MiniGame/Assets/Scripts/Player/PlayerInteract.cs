@@ -4,7 +4,7 @@ using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerInteract : MonoBehaviour
+public class PlayerInteract : SingletonBehaviour<GameManager>
 {
 
     //플레이어가 레이어에 닿았을때 뜨는 텍스트+패널
@@ -48,7 +48,12 @@ public class PlayerInteract : MonoBehaviour
                 _popuptext.text = ChageText[0];
                 IsInteractOK = true;
                 _popupObject.SetActive(true);
-            }
+            } 
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag(Tags[1])) { GameManager.Instance.PlayerDie(); }
     }
     //나가면 모두 Null
     private void OnTriggerExit2D(Collider2D collision)
