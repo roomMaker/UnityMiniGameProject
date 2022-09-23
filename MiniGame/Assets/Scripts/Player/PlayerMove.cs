@@ -33,12 +33,19 @@ public class PlayerMove : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Move();
+        if(!GameManager.Instance.IsGameOver)
+        {
+            Move();
+        }
     }
 
     private void Update()
     {
         Jump();
+        if(Input.GetMouseButton(0))
+        {
+            GameManager.Instance.PlayerDie();
+        }
     }
 
     private void Move()
