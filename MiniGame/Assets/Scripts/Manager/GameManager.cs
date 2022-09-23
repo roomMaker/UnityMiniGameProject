@@ -31,10 +31,10 @@ public class GameManager : SingletonBehaviour<GameManager>
 
     IEnumerator PlayerDeadMove()
     {
+        Player.GetComponent<BoxCollider2D>().enabled = false;
         Player.GetComponent<Rigidbody2D>().drag = 10000f;
         yield return new WaitForSeconds(0.4f);
         Player.GetComponent<Rigidbody2D>().drag = 0f;
-        Player.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 30f * Time.fixedDeltaTime, ForceMode2D.Impulse);
-        Player.GetComponent<BoxCollider2D>().enabled = false;
+        Player.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 30f * Time.deltaTime, ForceMode2D.Impulse);
     }
 }

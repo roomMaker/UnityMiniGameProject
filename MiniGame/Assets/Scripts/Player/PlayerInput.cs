@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerInput : MonoBehaviour
 {
@@ -28,9 +29,10 @@ public class PlayerInput : MonoBehaviour
 
         // 게임오버 처리
 
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R) && GameManager.Instance.IsGameOver)
         {
-
+            GameManager.Instance.IsGameOver = false;
+            SceneManager.LoadScene(GameManager.Instance.GameSceneIndex);
         }
 
 
