@@ -1,35 +1,40 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+
 
 public class GameManager : SingletonBehaviour<GameManager>
 {
+    public int GameSceneIndex;
     // 게임 매니저
     public GameObject Player;
 
+    public bool IsGameOver;
+
     public bool CanMovePlayer;
     /// <summary>
-    /// 플레이어 사망 처리
+    /// 플레이어 사망 함수
     /// </summary>
     public void PlayerDie()
     {
+        IsGameOver = true;
+
         Debug.Log("플레이어 사망!");
+        
         Animator[] animator = Player.GetComponentsInChildren<Animator>();
-        //Player.GetComponent<Animator>().SetBool("IsDie", true);
         animator[0].SetBool("IsDie", true);
         animator[1].SetBool("Dead", true);
 
 
+        StartCoroutine(PlayerDeadMove());
     }
 
     IEnumerator PlayerDeadMove()
     {
-        while(true)
-        {
-
-            yield return new WaitForSeconds(0.01f);
-        }
+        Player.GetComponent<Rigidbody2D>().drag = 10000f;
+        yield return new WaitForSeconds(0.4f);
+        Player.GetComponent<Rigidbody2D>().drag = 0f;
+        Player.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 30f * Time.fixedDeltaTime, ForceMode2D.Impulse);
+        Player.GetComponent<BoxCollider2D>().enabled = false;
     }
-
 }
