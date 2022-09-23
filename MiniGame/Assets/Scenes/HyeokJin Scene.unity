@@ -795,7 +795,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoveSpeed: 1
   Eagle: {fileID: 2074768347}
-  Rat: {fileID: 200492172}
+  Rat: {fileID: 200492173}
 --- !u!4 &1140462001
 Transform:
   m_ObjectHideFlags: 0
