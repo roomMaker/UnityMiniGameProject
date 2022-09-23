@@ -8,20 +8,21 @@ public class PlayerInput : MonoBehaviour
 {
     // PlayerMove 스크립트에서 받아 올 좌 우 키값 변수
     public float MoveX;
-
+    //상호작용할 PlayerInteract 스크립트가져옴
     [SerializeField]
-    private PlayerInteract _PlayerInteract;
+    private PlayerInteract _playerInteract;
+    //기획부분에서 상호작용 키를 바꿀것을 대비
+    [SerializeField]
+    private KeyCode _interactKey = KeyCode.E;
     // 일단 대략적으로 한 것이니 본인 입맛대로 수정 하셔도 됩니다. 대신, 수정하실 때는 팀원을에게 꼭 말씀해주세요
-    private void FixedUpdate()
+    private void Update()
     {
         // 상호작용 키 눌렀을 경우
-        // 상호작용이 되는 오브젝트를 만났냐?
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(_interactKey))
         {
-            if (_PlayerInteract.GetInteractable()!=null)
-            {
-                _PlayerInteract.GetInteractable().ActivateObject();
-            }
+            Debug.Log("키를 누름");
+            //상호작용이 가능한가? 가능하면 키를 눌렀을경우 상호작용
+            if(_playerInteract.IsInteractOK) { _playerInteract.GetInteractable().ActivateObject(); }
         }
         // 점프 키 처리 삭제 => PlayerMove 스크립트로 이동
 
