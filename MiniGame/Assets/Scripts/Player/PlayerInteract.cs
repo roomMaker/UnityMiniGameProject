@@ -17,7 +17,6 @@ public class PlayerInteract : SingletonBehaviour<GameManager>
     public bool IsInteractOK;
 
     private Interactable _tempInteractable;
-
     [Header("상호작용 UI 팝업")]
     [SerializeField]
     private Text _popuptext;
@@ -32,6 +31,7 @@ public class PlayerInteract : SingletonBehaviour<GameManager>
     private void Awake()
     {
         IsInteractOK = false;
+        _popupObject.SetActive(false);
     }
 
     //트리거 안에 들어왔을때

@@ -8,6 +8,5 @@ public class InteractableMushroom : Interactable
     {
         Destroy(this.gameObject);
         Debug.Log("╬савю╫");
-        GameManager.Instance.PlayerDie();
     }
 }
