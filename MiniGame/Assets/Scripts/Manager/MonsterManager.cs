@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class MonsterManager : MonoBehaviour
 {
+    // 몬스터들의 움직임 속도
     public float MoveSpeed = 1f;
+
+    // 쥐의 움직임 범위
+    public float RatMoveRange = 200f;
+    // 독수리의 움직임 범위
+    public float EagleMoveRange = 200f;
 
     // 독수리 오브젝트
     [SerializeField]
@@ -39,7 +45,7 @@ public class MonsterManager : MonoBehaviour
 
             _eagleCount++;
 
-            if (_eagleCount > 200)
+            if (_eagleCount > EagleMoveRange)
             {
                 _eagleCount = 0;
                 MoveSpeed *= -1;
@@ -56,13 +62,12 @@ public class MonsterManager : MonoBehaviour
             Rat.transform.Translate(new Vector2(-MoveSpeed * Time.fixedDeltaTime, 0f));
             _ratCount++;
 
-            if (_ratCount > 10000)
+            if (_ratCount > RatMoveRange)
             {
                 _spriteRenderer.flipX = !_spriteRenderer.flipX;
                 _ratCount = 0;
-                MoveSpeed *= -1;
             }
-            yield return new WaitForSeconds(0.0005f);
+            yield return new WaitForSeconds(0.003f);
         }
     }
 
