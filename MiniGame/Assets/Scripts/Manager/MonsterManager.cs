@@ -19,9 +19,12 @@ public class MonsterManager : MonoBehaviour
     private float _eagleCount = 0;
     private float _ratCount = 0;
 
+    private SpriteRenderer _spriteRenderer;
+
     // 코루틴 스타트
     private void Start()
     {
+        _spriteRenderer = Rat.GetComponent<SpriteRenderer>();
         StartCoroutine(EAGLE_Updown());
         StartCoroutine(RatMoving());
     }
@@ -53,12 +56,13 @@ public class MonsterManager : MonoBehaviour
             Rat.transform.Translate(new Vector2(-MoveSpeed * Time.fixedDeltaTime, 0f));
             _ratCount++;
 
-            if (_ratCount > 1000)
+            if (_ratCount > 10000)
             {
+                _spriteRenderer.flipX = !_spriteRenderer.flipX;
                 _ratCount = 0;
                 MoveSpeed *= -1;
             }
-            yield return new WaitForSeconds(0.005f);
+            yield return new WaitForSeconds(0.0005f);
         }
     }
 
