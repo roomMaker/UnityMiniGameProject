@@ -39,6 +39,10 @@ public class PlayerMove : MonoBehaviour
     private void Update()
     {
         Jump();
+        if(Input.GetMouseButton(0))
+        {
+            GameManager.Instance.PlayerDie();
+        }
     }
 
     private void Move()
