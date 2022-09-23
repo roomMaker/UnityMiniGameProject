@@ -23,9 +23,6 @@ public class PlayerInput : MonoBehaviour
                 _PlayerInteract.GetInteractable().ActivateObject();
             }
         }
-
-
-
         // 점프 키 처리 삭제 => PlayerMove 스크립트로 이동
 
         // 게임오버 처리
