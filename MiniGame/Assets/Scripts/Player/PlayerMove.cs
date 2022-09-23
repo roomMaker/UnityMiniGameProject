@@ -7,6 +7,8 @@ public class PlayerMove : MonoBehaviour
 {
     private PlayerInput _input;
     private Rigidbody2D _rigidbody;
+    private Animator _animator;
+    private SpriteRenderer _spriteRenderer;
 
     // 현재 점프상태인지 확인하는 변수
     private bool _isJump;
@@ -25,6 +27,8 @@ public class PlayerMove : MonoBehaviour
     {
         _input = GetComponent<PlayerInput>();
         _rigidbody = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
+        _spriteRenderer = GetComponent<SpriteRenderer>(); 
     }
 
     private void FixedUpdate()
@@ -39,6 +43,23 @@ public class PlayerMove : MonoBehaviour
 
     private void Move()
     {
+        if(_input.MoveX != 0)
+        {
+            _animator.SetBool("IsRun", true);
+        }
+        else
+        {
+            _animator.SetBool("IsRun", false);
+        }
+
+        if(_input.MoveX > 0)
+        {
+            _spriteRenderer.flipX = false;
+        }
+        if(_input.MoveX < 0)
+        {
+            _spriteRenderer.flipX = true;
+        }
         // 이동 벡터에 들어갈 변수 값 할당
         _playerX = _input.MoveX * _moveSpeed * Time.fixedDeltaTime;
 
@@ -54,13 +75,20 @@ public class PlayerMove : MonoBehaviour
         // 스페이스 키가 눌리고, 현재 점프 상태가 아닐 때
         if (Input.GetKeyDown(KeyCode.Space) && _isJump == false)
         {
+            _animator.SetBool("IsJump", true);
+            _isJump = true;
             // 점프!
             _rigidbody.AddForce(Vector2.up * _jumpPower, ForceMode2D.Impulse);
+        }
+
+        if(_isJump == false)
+        {
+            _animator.SetBool("IsJump", false);
         }
     }
 
     // 현재 플레이어의 점프 상태를 확인하는 처리
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.collider.CompareTag("Ground"))
         {
