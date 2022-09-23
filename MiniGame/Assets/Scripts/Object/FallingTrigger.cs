@@ -10,7 +10,6 @@ public class FallingTrigger : MonoBehaviour
     //트리거에 닿으면 오브젝트가 떨어짐
     private void OnTriggerEnter2D(Collider2D other)
     {
-        
         if (other.gameObject.CompareTag("Player")) FallingObjects[0].SetActive(true);
     }
 

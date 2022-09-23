@@ -35,10 +35,11 @@ public class PlayerInteract : SingletonBehaviour<GameManager>
     }
 
     //트리거 안에 들어왔을때
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
+        _tempInteractable = null;
         //Interactable 클래스를 오버라이드한 해당 오브젝트의 정보를 가지고 옴
-        if(collision.GetComponent<Interactable>()!=null)
+        if (collision.GetComponent<Interactable>()!=null)
         { 
             _tempInteractable = (Interactable)collision.GetComponent<Interactable>();
         }

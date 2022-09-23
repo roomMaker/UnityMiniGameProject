@@ -11,7 +11,7 @@ public class PlayerInput : MonoBehaviour
     //상호작용할 PlayerInteract 스크립트가져옴
     [SerializeField]
     private PlayerInteract _playerInteract;
-    //기획부분에서 상호작용키를 바꿀것을 대비
+    //기획부분에서 상호작용 키를 바꿀것을 대비
     [SerializeField]
     private KeyCode _interactKey = KeyCode.E;
     // 일단 대략적으로 한 것이니 본인 입맛대로 수정 하셔도 됩니다. 대신, 수정하실 때는 팀원을에게 꼭 말씀해주세요
