@@ -15,7 +15,7 @@ public class PlayerInput : MonoBehaviour
     [SerializeField]
     private KeyCode _interactKey = KeyCode.E;
     // 일단 대략적으로 한 것이니 본인 입맛대로 수정 하셔도 됩니다. 대신, 수정하실 때는 팀원을에게 꼭 말씀해주세요
-    private void FixedUpdate()
+    private void Update()
     {
         // 상호작용 키 눌렀을 경우
         if (Input.GetKeyDown(_interactKey))
