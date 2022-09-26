@@ -12,7 +12,7 @@ public class MonsterManager : MonoBehaviour
     // 독수리의 움직임 범위
     public float EagleMoveRange = 200f;
     // 개구리 점프 높이
-    public float FrogJumpRange = 15f;
+    public float FrogJumpRange = 30f;
     // 개구리 이동 반경
     public float FrogMoveRange = 4f;
 
@@ -32,9 +32,6 @@ public class MonsterManager : MonoBehaviour
     // 횟수 제한 카운트
     private float _eagleCount = 0;
     private float _ratCount = 0;
-
-    // 개구리 점프 왼쪽, 오른쪽 상태
-    private bool _isFrogJump = false;
 
     // 컴포넌트 가져오기
     private SpriteRenderer _spriteRenderer_rat;
@@ -68,7 +65,7 @@ public class MonsterManager : MonoBehaviour
                 _eagleCount = 0;
                 MoveSpeed *= -1;
             }
-            yield return new WaitForSeconds(0.001f);
+            yield return new WaitForSeconds(0.01f);
         }
     }
 
@@ -85,7 +82,7 @@ public class MonsterManager : MonoBehaviour
                 _spriteRenderer_rat.flipX = !_spriteRenderer_rat.flipX;
                 _ratCount = 0;
             }
-            yield return new WaitForSeconds(0.001f);
+            yield return new WaitForSeconds(0.01f);
         }
     }
 

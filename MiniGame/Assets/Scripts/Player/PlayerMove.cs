@@ -79,35 +79,23 @@ public class PlayerMove : MonoBehaviour
 
     private void Jump()
     {
-        // 스페이스 키가 눌리고, 현재 점프 상태가 아닐 때
-        if (Input.GetKey(KeyCode.Space) && _isJump == false)
+        // 스페이스 키가 눌리고, 현재 점프가 가능할 때
+        if (Input.GetKeyDown(KeyCode.Space) && _isJump == false)
         {
             _animator.SetBool("IsJump", true);
             _isJump = true;
             // 점프!
             _rigidbody.AddForce(Vector2.up * _jumpPower, ForceMode2D.Impulse);
         }
-
-        if(_isJump == false)
-        {
-            _animator.SetBool("IsJump", false);
-        }
     }
 
-    // 현재 플레이어의 점프 상태를 확인하는 처리
+    // 현재 플레이어의 점프 가능여부 처리
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.collider.CompareTag("Ground"))
+        if(collision.collider.CompareTag("Ground") && collision.collider.transform.position.y <= transform.position.y - 1)
         {
             _isJump = false;
-        }
-    }
-    // 현재 플레이어의 점프 상태를 확인하는 처리
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.collider.CompareTag("Ground"))
-        {
-            _isJump = true;
+            _animator.SetBool("IsJump", false);
         }
     }
 }

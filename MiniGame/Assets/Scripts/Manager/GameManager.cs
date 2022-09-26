@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 public class GameManager : SingletonBehaviour<GameManager>
 {
@@ -12,11 +12,16 @@ public class GameManager : SingletonBehaviour<GameManager>
     public bool IsGameOver;
 
     public bool CanMovePlayer;
+
+    public Text ScoreText;
+
+    public int Score;
     /// <summary>
     /// 플레이어 사망 함수
     /// </summary>
     public void PlayerDie()
     {
+        Player = FindObjectOfType<PlayerMove>().gameObject;
         IsGameOver = true;
 
         Debug.Log("플레이어 사망!");
@@ -37,5 +42,15 @@ public class GameManager : SingletonBehaviour<GameManager>
         Player.GetComponent<Rigidbody2D>().drag = 0f;
         Player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         Player.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 15f, ForceMode2D.Impulse);
+    }
+    
+    /// <summary>
+    /// 스코어 증가 및 설정 함수
+    /// </summary>
+    /// <param name="score">증가 스코어</param>
+    public void SetScore(int score)
+    {
+        Score += score;
+        ScoreText.text = $"Score : {Score}";
     }
 }
