@@ -32,6 +32,7 @@ public class PlayerInput : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R) && GameManager.Instance.IsGameOver)
         {
             GameManager.Instance.IsGameOver = false;
+            GameManager.Instance.InActiveGameOverUI();
             SceneManager.LoadScene(GameManager.Instance.GameSceneIndex);
         }
 
