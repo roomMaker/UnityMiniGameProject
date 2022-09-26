@@ -33,9 +33,6 @@ public class MonsterManager : MonoBehaviour
     private float _eagleCount = 0;
     private float _ratCount = 0;
 
-    // 개구리 점프 왼쪽, 오른쪽 상태
-    private bool _isFrogJump = false;
-
     // 컴포넌트 가져오기
     private SpriteRenderer _spriteRenderer_rat;
     private SpriteRenderer _spriteRenderer_frog;
