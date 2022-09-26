@@ -6,7 +6,7 @@ public class InteractableMushroom : Interactable
 {
     public override void ActivateObject()
     {
+        GameManager.Instance.DeadNameText.text = "µ¶ ¹ö¼¸¿¡ ÀÇÇØ »ç¸ÁÇÏ¿´½À´Ï´Ù..";
         GameManager.Instance.PlayerDie();
-        Debug.Log("¾ÓÁ×À½");
     }
 }

@@ -10,14 +10,22 @@ public class GameManager : SingletonBehaviour<GameManager>
     public GameObject Player;
 
     public bool IsGameOver;
+    
+    public bool CanMovePlayer = true;
 
-    public bool CanMovePlayer;
+    public bool IsPause;
+
+    public Text DeadNameText;
     // 점수 UI 텍스트
     public Text ScoreText;
     // 점수
     public int Score;
 
     public GameObject GameOverUI;
+
+    public GameObject PauseUI;
+
+
     /// <summary>
     /// 플레이어 사망 함수
     /// </summary>
@@ -28,9 +36,8 @@ public class GameManager : SingletonBehaviour<GameManager>
         {
             return;
         }
-        IsGameOver = true;
+        CanMovePlayer = false;
 
-        ActiveGameOverUI();
 
         Debug.Log("플레이어 사망!");
         
@@ -38,7 +45,7 @@ public class GameManager : SingletonBehaviour<GameManager>
         animator[0].SetBool("IsDie", true);
         animator[1].SetBool("Dead", true);
 
-
+        
         StartCoroutine(PlayerDeadMove());
     }
 
@@ -46,10 +53,15 @@ public class GameManager : SingletonBehaviour<GameManager>
     {
         Player.GetComponent<BoxCollider2D>().enabled = false;
         Player.GetComponent<Rigidbody2D>().drag = 10000f;
+
         yield return new WaitForSeconds(0.4f);
         Player.GetComponent<Rigidbody2D>().drag = 0f;
         Player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         Player.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 15f, ForceMode2D.Impulse);
+
+        yield return new WaitForSeconds(1f);
+        ActiveGameOverUI();
+        IsGameOver = true;
     }
     
     /// <summary>
@@ -62,13 +74,38 @@ public class GameManager : SingletonBehaviour<GameManager>
         ScoreText.text = $"Score : {Score}";
     }
 
+    /// <summary>
+    /// 게임오버 UI 활성화
+    /// </summary>
     public void ActiveGameOverUI()
     {
         GameOverUI.SetActive(true);
     }
 
+    /// <summary>
+    /// 게임오버 UI 비활성화
+    /// </summary>
     public void InActiveGameOverUI()
     {
         GameOverUI.SetActive(false);
     }
+
+    /// <summary>
+    /// 일시정지 처리 함수
+    /// </summary>
+    public void PauseOnOff()
+    {
+        IsPause = !IsPause;
+        if(IsPause)
+        {
+            Time.timeScale = 0f;
+        }
+        else
+        {
+            Time.timeScale = 1f;
+        }
+        PauseUI.SetActive(IsPause);
+    }
+
+
 }

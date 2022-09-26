@@ -8,6 +8,7 @@ public class MonsterInteraction : MonoBehaviour
     {
         if(collision.collider.CompareTag("Player"))
         {
+            GameManager.Instance.DeadNameText.text = "¸ó½ºÅÍ¿Í ºÎµúÇô »ç¸Á!";
             GameManager.Instance.PlayerDie();
         }
     }

@@ -33,7 +33,7 @@ public class PlayerMove : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(!GameManager.Instance.IsGameOver)
+        if(GameManager.Instance.CanMovePlayer)
         {
             Move();
         }
