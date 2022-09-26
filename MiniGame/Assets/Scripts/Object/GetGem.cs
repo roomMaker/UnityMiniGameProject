@@ -27,6 +27,6 @@ public class GetGem : MonoBehaviour
         _collider.enabled = false;
         _rigidbody.gravityScale = 5f;
         _rigidbody.AddForce(Vector2.up * 15f, ForceMode2D.Impulse);
-        GameManager.Instance.SetScore(GemScore);
+        GameManager.Instance.AddScore(GemScore);
     }
 }
