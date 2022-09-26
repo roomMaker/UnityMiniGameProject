@@ -79,9 +79,17 @@ public class GameManager : SingletonBehaviour<GameManager>
     /// 스코어 증가 및 설정 함수
     /// </summary>
     /// <param name="score">증가 스코어</param>
-    public void SetScore(int score)
+    public void AddScore(int score)
     {
         Score += score;
+        ScoreText.text = $"Score : {Score}";
+    }
+    /// <summary>
+    /// 스코어 리셋 함수
+    /// </summary>
+    public void ResetScore()
+    {
+        Score = 0;
         ScoreText.text = $"Score : {Score}";
     }
 
