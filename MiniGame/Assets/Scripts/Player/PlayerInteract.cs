@@ -53,7 +53,11 @@ public class PlayerInteract : SingletonBehaviour<PlayerInteract>
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag(Tags[1])) { GameManager.Instance.PlayerDie(); }
+        if (collision.gameObject.CompareTag(Tags[1])) 
+        {
+            GameManager.Instance.DeadNameText.text = "푸하하 다음번엔 더 잘해보세요";
+            GameManager.Instance.PlayerDie();
+        }
     }
 
     //나가면 모두 Null

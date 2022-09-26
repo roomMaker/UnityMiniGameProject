@@ -28,12 +28,17 @@ public class PlayerInput : MonoBehaviour
         // 점프 키 처리 삭제 => PlayerMove 스크립트로 이동
 
         // 게임오버 처리
-
         if (Input.GetKeyDown(KeyCode.R) && GameManager.Instance.IsGameOver)
         {
             GameManager.Instance.IsGameOver = false;
+            GameManager.Instance.CanMovePlayer = true;
             GameManager.Instance.InActiveGameOverUI();
             SceneManager.LoadScene(GameManager.Instance.GameSceneIndex);
+        }
+
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            GameManager.Instance.PauseOnOff();
         }
 
 
