@@ -5,9 +5,11 @@ using UnityEngine.UI;
 
 public class GameManager : SingletonBehaviour<GameManager>
 {
-    public int GameSceneIndex;
+    public int GameSceneIndex = 1;
     // 게임 매니저
     public GameObject Player;
+
+    public bool IsTutorialOver;
 
     public bool IsGameOver;
     
@@ -20,6 +22,8 @@ public class GameManager : SingletonBehaviour<GameManager>
     public Text ScoreText;
     // 점수
     public int Score;
+
+    public GameObject TutorialUI;
 
     public GameObject GameOverUI;
 
@@ -51,7 +55,7 @@ public class GameManager : SingletonBehaviour<GameManager>
 
     IEnumerator PlayerDeadMove()
     {
-        Player.GetComponent<BoxCollider2D>().enabled = false;
+        Player.GetComponent<CapsuleCollider2D>().enabled = false;
         Player.GetComponent<Rigidbody2D>().drag = 10000f;
 
         yield return new WaitForSeconds(0.4f);
@@ -62,6 +66,13 @@ public class GameManager : SingletonBehaviour<GameManager>
         yield return new WaitForSeconds(1f);
         ActiveGameOverUI();
         IsGameOver = true;
+    }
+
+    public void InActiveTutorial()
+    {
+        Time.timeScale = 1f;
+        IsTutorialOver = true;
+        TutorialUI.SetActive(false);
     }
     
     /// <summary>

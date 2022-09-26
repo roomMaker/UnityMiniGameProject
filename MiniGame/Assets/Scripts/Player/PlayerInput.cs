@@ -33,12 +33,18 @@ public class PlayerInput : MonoBehaviour
             GameManager.Instance.IsGameOver = false;
             GameManager.Instance.CanMovePlayer = true;
             GameManager.Instance.InActiveGameOverUI();
+            GameManager.Instance.GameSceneIndex = 1;
             SceneManager.LoadScene(GameManager.Instance.GameSceneIndex);
         }
 
         if(Input.GetKeyDown(KeyCode.Escape))
         {
             GameManager.Instance.PauseOnOff();
+        }
+
+        if(Input.GetKeyDown(KeyCode.Return) && GameManager.Instance.IsTutorialOver == false)
+        {
+            GameManager.Instance.InActiveTutorial();
         }
 
 
