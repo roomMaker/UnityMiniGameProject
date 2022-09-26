@@ -33,6 +33,7 @@ public class PlayerInput : MonoBehaviour
             GameManager.Instance.IsGameOver = false;
             GameManager.Instance.CanMovePlayer = true;
             GameManager.Instance.InActiveGameOverUI();
+            GameManager.Instance.GameSceneIndex = 1;
             SceneManager.LoadScene(GameManager.Instance.GameSceneIndex);
         }
 

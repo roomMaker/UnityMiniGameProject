@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class GameManager : SingletonBehaviour<GameManager>
 {
-    public int GameSceneIndex;
+    public int GameSceneIndex = 1;
     // 게임 매니저
     public GameObject Player;
 

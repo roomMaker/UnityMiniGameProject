@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GetGem : MonoBehaviour
 {
+    public int GemScore;
     private BoxCollider2D _collider;
     private Rigidbody2D _rigidbody;
 
@@ -26,6 +27,6 @@ public class GetGem : MonoBehaviour
         _collider.enabled = false;
         _rigidbody.gravityScale = 5f;
         _rigidbody.AddForce(Vector2.up * 15f, ForceMode2D.Impulse);
-        GameManager.Instance.SetScore(100);
+        GameManager.Instance.SetScore(GemScore);
     }
 }
