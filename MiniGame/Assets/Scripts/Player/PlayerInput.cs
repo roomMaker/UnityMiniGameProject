@@ -42,6 +42,11 @@ public class PlayerInput : MonoBehaviour
             GameManager.Instance.PauseOnOff();
         }
 
+        if(Input.GetKeyDown(KeyCode.Return) && GameManager.Instance.IsTutorialOver == false)
+        {
+            GameManager.Instance.InActiveTutorial();
+        }
+
 
         // 좌 우 값 받아서 MoveX에 업데이트
 

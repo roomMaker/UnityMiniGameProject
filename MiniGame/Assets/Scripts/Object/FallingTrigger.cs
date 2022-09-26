@@ -13,7 +13,7 @@ public class FallingTrigger : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             FallingObjects[0].SetActive(true);
-            FallingObjects[0].AddComponent<Rigidbody2D>();
+            //FallingObjects[0].AddComponent<Rigidbody2D>();
             FallingObjects[0].GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
         }
     }
