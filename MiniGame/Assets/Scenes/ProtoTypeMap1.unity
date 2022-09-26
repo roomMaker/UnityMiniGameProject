@@ -442,6 +442,7 @@ GameObject:
   - component: {fileID: 124097091}
   - component: {fileID: 124097094}
   - component: {fileID: 124097095}
+  - component: {fileID: 124097096}
   m_Layer: 0
   m_Name: Frog
   m_TagString: Untagged
@@ -529,12 +530,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 124097090}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.53, y: -1.7199993, z: 0}
+  m_LocalPosition: {x: 3.4970422, y: -1.8709239, z: -2.095867}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1734236793}
-  m_RootOrder: 44
+  m_Father: {fileID: 2144384181}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &124097094
 Rigidbody2D:
@@ -583,6 +584,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.27387786, y: 0.1879377}
   m_EdgeRadius: 0
+--- !u!114 &124097096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124097090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09ad4215dd03f7c40b7bf78afca8d013, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  JumpRange: 8
+  MoveRange: 2
 --- !u!1 &186541461
 GameObject:
   m_ObjectHideFlags: 0
@@ -705,6 +720,7 @@ GameObject:
   - component: {fileID: 200492174}
   - component: {fileID: 200492173}
   - component: {fileID: 200492175}
+  - component: {fileID: 200492176}
   m_Layer: 0
   m_Name: Rat
   m_TagString: Untagged
@@ -772,12 +788,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 200492172}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.87, y: -1.8, z: 0}
+  m_LocalPosition: {x: 0.097042084, y: -1.9509245, z: -2.095867}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1734236793}
-  m_RootOrder: 45
+  m_Father: {fileID: 2144384181}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &200492175
 Animator:
@@ -799,6 +815,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &200492176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200492172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b5b2700a3b81e04694b0877f3069dec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoveSpeed: 1
+  RatMoveRange: 200
 --- !u!1 &435737151 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7216285065291229222, guid: 4330aa7498942ef469052987e59e9f05, type: 3}
@@ -1785,7 +1815,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &785017427
 Rigidbody2D:
@@ -1886,7 +1916,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &797490323
 GameObject:
@@ -2304,7 +2334,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &919540794
 BoxCollider2D:
@@ -2798,58 +2828,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1734236793}
   m_RootOrder: 27
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1140461999
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1140462001}
-  - component: {fileID: 1140462000}
-  m_Layer: 0
-  m_Name: MonsterManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1140462000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1140461999}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28585f15f1f2fb046994baeceaadaa1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveSpeed: 1
-  RatMoveRange: 200
-  EagleMoveRange: 200
-  FrogJumpRange: 5
-  FrogMoveRange: 4
-  Eagle: {fileID: 2074768347}
-  Rat: {fileID: 200492172}
-  Frog: {fileID: 124097090}
---- !u!4 &1140462001
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1140461999}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.3390024, y: 1.8198308, z: -0.061856225}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1208791562
 GameObject:
@@ -4766,9 +4744,6 @@ Transform:
   - {fileID: 956092431}
   - {fileID: 1029626257}
   - {fileID: 2025158822}
-  - {fileID: 2074768349}
-  - {fileID: 124097093}
-  - {fileID: 200492174}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5268,7 +5243,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1874033602
 MonoBehaviour:
@@ -6059,6 +6034,7 @@ GameObject:
   - component: {fileID: 2074768350}
   - component: {fileID: 2074768352}
   - component: {fileID: 2074768351}
+  - component: {fileID: 2074768353}
   m_Layer: 0
   m_Name: Eagle
   m_TagString: Untagged
@@ -6126,12 +6102,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2074768347}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.06, y: -0.26, z: 0}
+  m_LocalPosition: {x: 2.027042, y: -0.41092455, z: -2.095867}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1734236793}
-  m_RootOrder: 43
+  m_Father: {fileID: 2144384181}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &2074768350
 Animator:
@@ -6191,6 +6167,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.31731024, y: 0.37784278}
   m_EdgeRadius: 0
+--- !u!114 &2074768353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2074768347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a94bda5c7d8e74997f64bec54536a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoveSpeed: 1
+  MoveRange: 200
 --- !u!1 &2114898702 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7216285065698241572, guid: 4330aa7498942ef469052987e59e9f05, type: 3}
@@ -6368,3 +6358,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2139150242}
   m_CullTransparentMesh: 1
+--- !u!1 &2144384180
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2144384181}
+  m_Layer: 0
+  m_Name: Monsters
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2144384181
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2144384180}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.9670421, y: 0.15092458, z: 2.095867}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2074768349}
+  - {fileID: 124097093}
+  - {fileID: 200492174}
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
