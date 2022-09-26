@@ -35,6 +35,7 @@ public class RatMovement : MonoBehaviour
             {
                 _spriteRenderer.flipX = !_spriteRenderer.flipX;
                 _moveCount = 0;
+                MoveSpeed *= -1;
             }
             yield return new WaitForSeconds(0.01f);
         }

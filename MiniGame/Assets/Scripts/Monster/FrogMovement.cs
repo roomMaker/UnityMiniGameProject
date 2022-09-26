@@ -30,12 +30,12 @@ public class FrogMovement : MonoBehaviour
     {
         while (true)
         {
+            yield return new WaitForSeconds(4f);
             MoveRange *= -1;
             _spriteRenderer.flipX = !_spriteRenderer.flipX;
-            _rigidbody.AddForce(new Vector2(-MoveRange, JumpRange), ForceMode2D.Impulse);
+            _rigidbody.AddForce(new Vector2(MoveRange, JumpRange), ForceMode2D.Impulse);
 
             _animator.SetBool("IsJump", true);
-            yield return new WaitForSeconds(4f);
         }
     }
 
