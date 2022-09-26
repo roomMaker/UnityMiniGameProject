@@ -12,17 +12,25 @@ public class GameManager : SingletonBehaviour<GameManager>
     public bool IsGameOver;
 
     public bool CanMovePlayer;
-
+    // 점수 UI 텍스트
     public Text ScoreText;
-
+    // 점수
     public int Score;
+
+    public GameObject GameOverUI;
     /// <summary>
     /// 플레이어 사망 함수
     /// </summary>
     public void PlayerDie()
     {
         Player = FindObjectOfType<PlayerMove>().gameObject;
+        if(Player == null)
+        {
+            return;
+        }
         IsGameOver = true;
+
+        ActiveGameOverUI();
 
         Debug.Log("플레이어 사망!");
         
@@ -52,5 +60,15 @@ public class GameManager : SingletonBehaviour<GameManager>
     {
         Score += score;
         ScoreText.text = $"Score : {Score}";
+    }
+
+    public void ActiveGameOverUI()
+    {
+        GameOverUI.SetActive(true);
+    }
+
+    public void InActiveGameOverUI()
+    {
+        GameOverUI.SetActive(false);
     }
 }

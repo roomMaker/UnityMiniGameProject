@@ -1,10 +1,9 @@
-using Unity.VisualScripting;
-using UnityEditor.Build.Content;
-using UnityEditor.UIElements;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerInteract : SingletonBehaviour<GameManager>
+public class PlayerInteract : SingletonBehaviour<PlayerInteract>
 {
 
     //플레이어가 레이어에 닿았을때 뜨는 텍스트+패널
