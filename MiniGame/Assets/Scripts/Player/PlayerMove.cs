@@ -9,6 +9,7 @@ public class PlayerMove : MonoBehaviour
     private Rigidbody2D _rigidbody;
     private Animator _animator;
     private SpriteRenderer _spriteRenderer;
+    private AudioSource _audioSource;
 
     // 현재 점프상태인지 확인하는 변수
     [SerializeField]
@@ -30,6 +31,7 @@ public class PlayerMove : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
     private void FixedUpdate()
@@ -92,6 +94,7 @@ public class PlayerMove : MonoBehaviour
         _isJump = true;
         // 점프!
         _rigidbody.AddForce(Vector2.up * _jumpPower, ForceMode2D.Impulse);
+        _audioSource.Play();
     }
 
     // 현재 플레이어의 점프 가능여부 처리
