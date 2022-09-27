@@ -629,7 +629,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4787940580090228151, guid: 53e3ed0a59a03834bbdb9b260fe39c41, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4787940580090228151, guid: 53e3ed0a59a03834bbdb9b260fe39c41, type: 3}
       propertyPath: m_LocalScale.x
@@ -703,7 +703,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4787940580090228151, guid: 53e3ed0a59a03834bbdb9b260fe39c41, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4787940580090228151, guid: 53e3ed0a59a03834bbdb9b260fe39c41, type: 3}
       propertyPath: m_LocalScale.x
@@ -1435,6 +1435,18 @@ PrefabInstance:
     - target: {fileID: 8128209531972037541, guid: 4330aa7498942ef469052987e59e9f05, type: 3}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8128209531972037541, guid: 4330aa7498942ef469052987e59e9f05, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8128209531972037541, guid: 4330aa7498942ef469052987e59e9f05, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8128209531972037541, guid: 4330aa7498942ef469052987e59e9f05, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8128209531972037541, guid: 4330aa7498942ef469052987e59e9f05, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2474,7 +2486,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1700671481}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1029626258
 BoxCollider2D:
@@ -4510,9 +4522,9 @@ Transform:
   m_Children:
   - {fileID: 1619521982}
   - {fileID: 712555339}
+  - {fileID: 1029626257}
   - {fileID: 187609790}
   - {fileID: 290058125}
-  - {fileID: 1029626257}
   - {fileID: 1427257605}
   - {fileID: 797490325}
   m_Father: {fileID: 0}
