@@ -1,12 +1,21 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class InteractableBox : Interactable
 {
-    //여기서 오브젝트 이벤트 실행
+    // 게임클리어 이미지 삽입
+    public Image GameClear_Image;
+
+    // 상자 획득시 게임 클리어
     public override void ActivateObject()
     {
-        Debug.Log("게임클리어");
+        GameClear_Image.gameObject.SetActive(true);
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene("Title");
+        }
     }
 }
