@@ -7,7 +7,6 @@ public class InteractableBox : Interactable
     //여기서 오브젝트 이벤트 실행
     public override void ActivateObject()
     {
-        Destroy(this.gameObject);
-        Debug.Log("앙사라짐");
+        Debug.Log("게임클리어");
     }
 }
