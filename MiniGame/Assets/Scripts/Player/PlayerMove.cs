@@ -88,7 +88,13 @@ public class PlayerMove : MonoBehaviour
     // 현재 플레이어의 점프 가능여부 처리
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.collider.CompareTag("Ground") && collision.collider.transform.position.y <= transform.position.y - 1)
+        if(collision.collider.CompareTag("Ground") && collision.collider.transform.position.y <= transform.position.y - 0.9f)
+        {
+            _isJump = false;
+            _animator.SetBool("IsJump", false);
+        }
+
+        if(collision.collider.CompareTag("Bridge"))
         {
             _isJump = false;
             _animator.SetBool("IsJump", false);
