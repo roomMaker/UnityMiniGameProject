@@ -11,6 +11,7 @@ public class PlayerMove : MonoBehaviour
     private SpriteRenderer _spriteRenderer;
 
     // 현재 점프상태인지 확인하는 변수
+    [SerializeField]
     private bool _isJump;
 
     // 플레이어 이동 벡터에 들어갈 X 값 변수
@@ -28,7 +29,7 @@ public class PlayerMove : MonoBehaviour
         _input = GetComponent<PlayerInput>();
         _rigidbody = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
-        _spriteRenderer = GetComponent<SpriteRenderer>(); 
+        _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void FixedUpdate()
@@ -41,7 +42,14 @@ public class PlayerMove : MonoBehaviour
 
     private void Update()
     {
-        Jump();
+        if(_animator.GetBool("IsJump"))
+        {
+            _isJump = true;
+        }
+        if(Input.GetKeyDown(KeyCode.Space) && _rigidbody.velocity.y <= 0)
+        {
+            Jump();
+        }
     }
 
     private void Move()
@@ -75,29 +83,25 @@ public class PlayerMove : MonoBehaviour
 
     private void Jump()
     {
-        // 스페이스 키가 눌리고, 현재 점프가 가능할 때
-        if (Input.GetKeyDown(KeyCode.Space) && _isJump == false)
+        if(_isJump)
         {
-            _animator.SetBool("IsJump", true);
-            _isJump = true;
-            // 점프!
-            _rigidbody.AddForce(Vector2.up * _jumpPower, ForceMode2D.Impulse);
+            return;
         }
+        Debug.Log("점프");
+        _animator.SetBool("IsJump", true);
+        _isJump = true;
+        // 점프!
+        _rigidbody.AddForce(Vector2.up * _jumpPower, ForceMode2D.Impulse);
     }
 
     // 현재 플레이어의 점프 가능여부 처리
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.collider.CompareTag("Ground") && collision.collider.transform.position.y <= transform.position.y - 0.9f)
-        {
-            _isJump = false;
-            _animator.SetBool("IsJump", false);
-        }
-
-        if(collision.collider.CompareTag("Bridge"))
+        if ((collision.collider.CompareTag("Ground") && transform.position.y - collision.collider.transform.position.y >= 0.9f) || collision.collider.CompareTag("Bridge"))
         {
             _isJump = false;
             _animator.SetBool("IsJump", false);
         }
     }
 }
+    

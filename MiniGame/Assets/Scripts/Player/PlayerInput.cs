@@ -48,9 +48,7 @@ public class PlayerInput : MonoBehaviour
             GameManager.Instance.InActiveTutorial();
         }
 
-
         // 좌 우 값 받아서 MoveX에 업데이트
-
         MoveX = Input.GetAxisRaw("Horizontal");
     }
 }
