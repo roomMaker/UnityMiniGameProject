@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 12772595}
   m_Layer: 0
   m_Name: UpGround Effector
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -268,7 +268,7 @@ GameObject:
   - component: {fileID: 15292772}
   m_Layer: 0
   m_Name: UpGround Effector
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -397,7 +397,7 @@ GameObject:
   - component: {fileID: 24476680}
   m_Layer: 0
   m_Name: Shelf2
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -483,7 +483,7 @@ GameObject:
   - component: {fileID: 33207178}
   m_Layer: 0
   m_Name: UpGround Effector
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -616,7 +616,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &35542772
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -697,7 +697,7 @@ GameObject:
   - component: {fileID: 53741823}
   m_Layer: 0
   m_Name: UnderGround
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -919,7 +919,7 @@ GameObject:
   - component: {fileID: 102998311}
   m_Layer: 0
   m_Name: UnderGround
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1031,7 +1031,7 @@ GameObject:
   - component: {fileID: 111880438}
   m_Layer: 0
   m_Name: UpGround Effector
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1488,7 +1488,7 @@ GameObject:
   - component: {fileID: 258024062}
   m_Layer: 0
   m_Name: UpGround Effector
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1619,7 +1619,7 @@ GameObject:
   - component: {fileID: 294680494}
   m_Layer: 0
   m_Name: UpGround Effector
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1749,7 +1749,7 @@ GameObject:
   - component: {fileID: 296598115}
   m_Layer: 0
   m_Name: UpGround
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1860,7 +1860,7 @@ GameObject:
   - component: {fileID: 316218668}
   m_Layer: 0
   m_Name: UpGround
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1971,7 +1971,7 @@ GameObject:
   - component: {fileID: 317810601}
   m_Layer: 0
   m_Name: UpGround
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2119,7 +2119,7 @@ GameObject:
   - component: {fileID: 334004407}
   m_Layer: 0
   m_Name: UnderGround
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2231,7 +2231,7 @@ GameObject:
   - component: {fileID: 344320259}
   m_Layer: 0
   m_Name: UpGround Effector
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2360,7 +2360,7 @@ GameObject:
   - component: {fileID: 358924279}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2445,7 +2445,7 @@ GameObject:
   - component: {fileID: 386908472}
   m_Layer: 0
   m_Name: UpGround
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2641,7 +2641,7 @@ GameObject:
   - component: {fileID: 402794544}
   m_Layer: 0
   m_Name: UpGround Effector
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2772,7 +2772,7 @@ GameObject:
   - component: {fileID: 405681889}
   m_Layer: 0
   m_Name: UpGround Effector
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3013,7 +3013,7 @@ GameObject:
   - component: {fileID: 459316284}
   m_Layer: 0
   m_Name: UnderGround
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3125,7 +3125,7 @@ GameObject:
   - component: {fileID: 475095311}
   m_Layer: 0
   m_Name: UpGround Effector
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3498,7 +3498,7 @@ GameObject:
   - component: {fileID: 494341306}
   m_Layer: 0
   m_Name: UpGround Effector
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3713,7 +3713,7 @@ GameObject:
   - component: {fileID: 513480754}
   m_Layer: 0
   m_Name: UpGround Effector
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3928,7 +3928,7 @@ GameObject:
   - component: {fileID: 543471295}
   m_Layer: 0
   m_Name: UpGround Effector
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4058,7 +4058,7 @@ GameObject:
   - component: {fileID: 550350584}
   m_Layer: 0
   m_Name: UpGround
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4378,7 +4378,7 @@ GameObject:
   - component: {fileID: 589076016}
   m_Layer: 0
   m_Name: UpGround
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4489,7 +4489,7 @@ GameObject:
   - component: {fileID: 592040927}
   m_Layer: 0
   m_Name: UnderGround
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4684,7 +4684,7 @@ GameObject:
   - component: {fileID: 650929604}
   m_Layer: 0
   m_Name: UpGround
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4796,7 +4796,7 @@ GameObject:
   - component: {fileID: 654674181}
   m_Layer: 0
   m_Name: UpGround Effector
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5009,7 +5009,7 @@ GameObject:
   - component: {fileID: 733633485}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5400,7 +5400,7 @@ GameObject:
   - component: {fileID: 820758923}
   m_Layer: 0
   m_Name: Shelf1
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5510,7 +5510,7 @@ GameObject:
   - component: {fileID: 836693702}
   m_Layer: 0
   m_Name: Shelf2
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5707,7 +5707,7 @@ GameObject:
   - component: {fileID: 890311960}
   m_Layer: 0
   m_Name: UnderGround Falling
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5830,7 +5830,7 @@ GameObject:
   - component: {fileID: 901756510}
   m_Layer: 0
   m_Name: UpGround
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6025,7 +6025,7 @@ GameObject:
   - component: {fileID: 955808787}
   m_Layer: 0
   m_Name: UnderGround
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6194,7 +6194,7 @@ GameObject:
   - component: {fileID: 967651100}
   m_Layer: 0
   m_Name: UpGround Effector
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6325,7 +6325,7 @@ GameObject:
   - component: {fileID: 981688666}
   m_Layer: 0
   m_Name: UpGround Effector
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6454,7 +6454,7 @@ GameObject:
   - component: {fileID: 1022635658}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6539,7 +6539,7 @@ GameObject:
   - component: {fileID: 1040987942}
   m_Layer: 0
   m_Name: Pillar
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6651,7 +6651,7 @@ GameObject:
   - component: {fileID: 1045431828}
   m_Layer: 0
   m_Name: UpGround Effector
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6781,7 +6781,7 @@ GameObject:
   - component: {fileID: 1079540389}
   m_Layer: 0
   m_Name: Pillar
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6893,7 +6893,7 @@ GameObject:
   - component: {fileID: 1159893153}
   m_Layer: 0
   m_Name: UpGround Effector
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7024,7 +7024,7 @@ GameObject:
   - component: {fileID: 1170207488}
   m_Layer: 0
   m_Name: UpGround Effector
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7154,7 +7154,7 @@ GameObject:
   - component: {fileID: 1268750814}
   m_Layer: 0
   m_Name: UnderGround
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7265,7 +7265,7 @@ GameObject:
   - component: {fileID: 1295339965}
   m_Layer: 0
   m_Name: UnderGround
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7376,7 +7376,7 @@ GameObject:
   - component: {fileID: 1318985350}
   m_Layer: 0
   m_Name: UnderGround
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7487,7 +7487,7 @@ GameObject:
   - component: {fileID: 1357089419}
   m_Layer: 0
   m_Name: UnderGround
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7599,7 +7599,7 @@ GameObject:
   - component: {fileID: 1357602809}
   m_Layer: 0
   m_Name: UpGround Effector
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7813,7 +7813,7 @@ GameObject:
   - component: {fileID: 1399772666}
   m_Layer: 0
   m_Name: UnderGround
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7924,7 +7924,7 @@ GameObject:
   - component: {fileID: 1400261097}
   m_Layer: 0
   m_Name: UnderGround
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8035,7 +8035,7 @@ GameObject:
   - component: {fileID: 1418342240}
   m_Layer: 0
   m_Name: UpGround
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8146,7 +8146,7 @@ GameObject:
   - component: {fileID: 1425960840}
   m_Layer: 0
   m_Name: UnderGround
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8257,7 +8257,7 @@ GameObject:
   - component: {fileID: 1469840267}
   m_Layer: 0
   m_Name: UnderGround
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8479,7 +8479,7 @@ GameObject:
   - component: {fileID: 1543619650}
   m_Layer: 0
   m_Name: UpGround
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8594,7 +8594,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &1544914824
 Animator:
   serializedVersion: 4
@@ -8696,7 +8696,7 @@ GameObject:
   - component: {fileID: 1561382380}
   m_Layer: 0
   m_Name: UpGround Effector
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8826,7 +8826,7 @@ GameObject:
   - component: {fileID: 1575467248}
   m_Layer: 0
   m_Name: UpGround
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8937,7 +8937,7 @@ GameObject:
   - component: {fileID: 1578925066}
   m_Layer: 0
   m_Name: UnderGround
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9180,7 +9180,7 @@ GameObject:
   - component: {fileID: 1635109830}
   m_Layer: 0
   m_Name: UpGround Effector
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9311,7 +9311,7 @@ GameObject:
   - component: {fileID: 1647039687}
   m_Layer: 0
   m_Name: UnderGround Falling
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9435,7 +9435,7 @@ GameObject:
   - component: {fileID: 1649196474}
   m_Layer: 0
   m_Name: UpGround Effector
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9566,7 +9566,7 @@ GameObject:
   - component: {fileID: 1672245384}
   m_Layer: 0
   m_Name: UpGround Effector
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9697,7 +9697,7 @@ GameObject:
   - component: {fileID: 1678430402}
   m_Layer: 0
   m_Name: UpGround Effector
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9830,7 +9830,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1705079719
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9995,7 +9995,7 @@ GameObject:
   - component: {fileID: 1744563527}
   m_Layer: 0
   m_Name: UnderGround
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10106,7 +10106,7 @@ GameObject:
   - component: {fileID: 1750014911}
   m_Layer: 0
   m_Name: UnderGround
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10301,7 +10301,7 @@ GameObject:
   - component: {fileID: 1769628085}
   m_Layer: 0
   m_Name: UnderGround
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10412,7 +10412,7 @@ GameObject:
   - component: {fileID: 1773916821}
   m_Layer: 0
   m_Name: UnderGround
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10607,7 +10607,7 @@ GameObject:
   - component: {fileID: 1787625283}
   m_Layer: 0
   m_Name: UpGround
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10718,7 +10718,7 @@ GameObject:
   - component: {fileID: 1828217434}
   m_Layer: 0
   m_Name: UpGround
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10829,7 +10829,7 @@ GameObject:
   - component: {fileID: 1849162702}
   m_Layer: 0
   m_Name: UnderGround
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10998,7 +10998,7 @@ GameObject:
   - component: {fileID: 1897100928}
   m_Layer: 0
   m_Name: UpGround Effector
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11287,7 +11287,7 @@ GameObject:
   - component: {fileID: 1926619971}
   m_Layer: 0
   m_Name: UpGround Effector
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11501,7 +11501,7 @@ GameObject:
   - component: {fileID: 2017153813}
   m_Layer: 0
   m_Name: UpGround
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11697,7 +11697,7 @@ GameObject:
   - component: {fileID: 2026034957}
   m_Layer: 0
   m_Name: UpGround Effector
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11901,7 +11901,7 @@ GameObject:
   - component: {fileID: 2072265094}
   m_Layer: 0
   m_Name: Shelf1
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12012,7 +12012,7 @@ GameObject:
   - component: {fileID: 2082494985}
   m_Layer: 0
   m_Name: UnderGround
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12124,7 +12124,7 @@ GameObject:
   - component: {fileID: 2112873412}
   m_Layer: 0
   m_Name: UpGround Effector
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12255,7 +12255,7 @@ GameObject:
   - component: {fileID: 2113191024}
   m_Layer: 0
   m_Name: UpGround Effector
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
