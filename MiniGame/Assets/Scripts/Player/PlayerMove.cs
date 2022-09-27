@@ -28,15 +28,16 @@ public class PlayerMove : MonoBehaviour
         _input = GetComponent<PlayerInput>();
         _rigidbody = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
-        _spriteRenderer = GetComponent<SpriteRenderer>(); 
+        _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void FixedUpdate()
     {
-        if(GameManager.Instance.CanMovePlayer)
+        if (GameManager.Instance.CanMovePlayer)
         {
             Move();
         }
+
     }
 
     private void Update()
@@ -46,7 +47,7 @@ public class PlayerMove : MonoBehaviour
 
     private void Move()
     {
-        if(_input.MoveX != 0)
+        if (_input.MoveX != 0)
         {
             _animator.SetBool("IsRun", true);
         }
@@ -55,11 +56,11 @@ public class PlayerMove : MonoBehaviour
             _animator.SetBool("IsRun", false);
         }
 
-        if(_input.MoveX > 0)
+        if (_input.MoveX > 0)
         {
             _spriteRenderer.flipX = false;
         }
-        if(_input.MoveX < 0)
+        if (_input.MoveX < 0)
         {
             _spriteRenderer.flipX = true;
         }
@@ -76,28 +77,35 @@ public class PlayerMove : MonoBehaviour
     private void Jump()
     {
         // 스페이스 키가 눌리고, 현재 점프가 가능할 때
-        if (Input.GetKeyDown(KeyCode.Space) && _isJump == false)
+        if (Input.GetKeyDown(KeyCode.Space) && _isJump == false && !_animator.GetBool("IsJump"))
         {
             _animator.SetBool("IsJump", true);
             _isJump = true;
+
             // 점프!
             _rigidbody.AddForce(Vector2.up * _jumpPower, ForceMode2D.Impulse);
+            GetComponent<CapsuleCollider2D>().enabled = false;
+        }
+        else if (_isJump && _rigidbody.velocity.y < 0.02f)
+        {
+            GetComponent<CapsuleCollider2D>().enabled = true;
         }
     }
 
     // 현재 플레이어의 점프 가능여부 처리
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.collider.CompareTag("Ground") && collision.collider.transform.position.y <= transform.position.y - 0.9f)
+        if (collision.collider.CompareTag("Ground") && collision.collider.transform.position.y <= transform.position.y - 0.9f)
         {
             _isJump = false;
             _animator.SetBool("IsJump", false);
         }
 
-        if(collision.collider.CompareTag("Bridge"))
+        if (collision.collider.CompareTag("Bridge"))
         {
             _isJump = false;
             _animator.SetBool("IsJump", false);
         }
+
     }
 }
