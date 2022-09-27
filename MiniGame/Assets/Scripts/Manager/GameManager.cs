@@ -29,6 +29,11 @@ public class GameManager : SingletonBehaviour<GameManager>
 
     public GameObject PauseUI;
 
+    //죽음사운드
+    public AudioSource DieSound;
+    public AudioSource ResetSound;
+
+
 
     /// <summary>
     /// 플레이어 사망 함수
