@@ -8,6 +8,7 @@ public class FallDead : MonoBehaviour
     {
         if(collision.collider.CompareTag("Player"))
         {
+            GameManager.Instance.DeadNameText.text = "¶³¾îÁ® »ç¸ÁÇÏ¿´½À´Ï´Ù..";
             GameManager.Instance.PlayerDie();
         }
     }
