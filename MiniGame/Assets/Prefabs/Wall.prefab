@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5692928551844926653}
   - component: {fileID: 5692928551844926652}
   - component: {fileID: 5692928551844926651}
+  - component: {fileID: 560316749}
   m_Layer: 0
   m_Name: BottomWall
   m_TagString: Untagged
@@ -71,6 +72,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07fa37561faefd14689197fd4f24d568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &560316749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5692928551844926654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad8f574e088253148ac0ad8e32d0ca83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOverIndex: 2
 --- !u!1 &5692928552297075732
 GameObject:
   m_ObjectHideFlags: 0

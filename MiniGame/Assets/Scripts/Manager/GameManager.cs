@@ -29,15 +29,12 @@ public class GameManager : SingletonBehaviour<GameManager>
 
     public GameObject PauseUI;
 
-    private int _setGameOverIndex;
-
 
     /// <summary>
     /// 플레이어 사망 함수
     /// </summary>
-    public void PlayerDie(/*int gameOverIndex*/)
+    public void PlayerDie()
     {
-        //_setGameOverIndex = gameOverIndex;
         Player = FindObjectOfType<PlayerMove>().gameObject;
         if(Player == null)
         {
@@ -99,9 +96,9 @@ public class GameManager : SingletonBehaviour<GameManager>
     /// 게임오버 UI 세팅 함수
     /// </summary>
     /// <param name="index">해당 인덱스 번호를 가진 UI 이미지를 세팅한다.</param>
-    public void SetGameOverUI()
+    public void SetGameOverUI(int gameOverIndex)
     {
-        GameOverUI.GetComponent<Image>().sprite = GameOverUISprite[_setGameOverIndex];
+        GameOverUI.GetComponent<Image>().sprite = GameOverUISprite[gameOverIndex];
     }
     /// <summary>
     /// 게임오버 UI 활성화

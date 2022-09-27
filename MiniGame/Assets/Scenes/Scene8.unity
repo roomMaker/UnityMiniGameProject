@@ -954,7 +954,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 560316749, guid: 10dccd49e2af9274b9843e9c04d8642b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 10dccd49e2af9274b9843e9c04d8642b, type: 3}
 --- !u!4 &237091724 stripped
 Transform:
@@ -2943,6 +2944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbef8ab91577b1e43a56c76293718294, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameClear_Image: {fileID: 0}
 --- !u!61 &853784494
 BoxCollider2D:
   m_ObjectHideFlags: 0
