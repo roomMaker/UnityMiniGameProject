@@ -82,7 +82,7 @@ public class GameManager : SingletonBehaviour<GameManager>
     public void AddScore(int score)
     {
         Score += score;
-        ScoreText.text = $"Score : {Score}";
+        ScoreText.text = $"{Score}";
     }
     /// <summary>
     /// 스코어 리셋 함수
@@ -90,7 +90,7 @@ public class GameManager : SingletonBehaviour<GameManager>
     public void ResetScore()
     {
         Score = 0;
-        ScoreText.text = $"Score : {Score}";
+        ScoreText.text = $"{Score}";
     }
 
     /// <summary>
