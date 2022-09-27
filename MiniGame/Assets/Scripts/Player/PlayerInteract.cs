@@ -55,7 +55,6 @@ public class PlayerInteract : SingletonBehaviour<PlayerInteract>
     {
         if (collision.gameObject.CompareTag(Tags[1])) 
         {
-            GameManager.Instance.DeadNameText.text = "푸하하 다음번엔 더 잘해보세요";
             GameManager.Instance.PlayerDie();
         }
     }

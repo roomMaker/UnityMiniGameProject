@@ -16,8 +16,6 @@ public class GameManager : SingletonBehaviour<GameManager>
     public bool CanMovePlayer = true;
 
     public bool IsPause;
-
-    public Text DeadNameText;
     // 점수 UI 텍스트
     public Text ScoreText;
     // 점수
@@ -25,16 +23,21 @@ public class GameManager : SingletonBehaviour<GameManager>
 
     public GameObject TutorialUI;
 
+    public Sprite[] GameOverUISprite;
+
     public GameObject GameOverUI;
 
     public GameObject PauseUI;
+
+    private int _setGameOverIndex;
 
 
     /// <summary>
     /// 플레이어 사망 함수
     /// </summary>
-    public void PlayerDie()
+    public void PlayerDie(/*int gameOverIndex*/)
     {
+        //_setGameOverIndex = gameOverIndex;
         Player = FindObjectOfType<PlayerMove>().gameObject;
         if(Player == null)
         {
@@ -92,7 +95,14 @@ public class GameManager : SingletonBehaviour<GameManager>
         Score = 0;
         ScoreText.text = $"{Score}";
     }
-
+    /// <summary>
+    /// 게임오버 UI 세팅 함수
+    /// </summary>
+    /// <param name="index">해당 인덱스 번호를 가진 UI 이미지를 세팅한다.</param>
+    public void SetGameOverUI()
+    {
+        GameOverUI.GetComponent<Image>().sprite = GameOverUISprite[_setGameOverIndex];
+    }
     /// <summary>
     /// 게임오버 UI 활성화
     /// </summary>
