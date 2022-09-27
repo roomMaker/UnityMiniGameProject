@@ -25,7 +25,7 @@ public class GameManager : SingletonBehaviour<GameManager>
 
     public GameObject TutorialUI;
 
-    public GameObject GameOverUI;
+    public GameObject[] GameOverUI;
 
     public GameObject PauseUI;
 
@@ -98,7 +98,7 @@ public class GameManager : SingletonBehaviour<GameManager>
     /// </summary>
     public void ActiveGameOverUI()
     {
-        GameOverUI.SetActive(true);
+        //GameOverUI.SetActive(true);
     }
 
     /// <summary>
@@ -106,7 +106,7 @@ public class GameManager : SingletonBehaviour<GameManager>
     /// </summary>
     public void InActiveGameOverUI()
     {
-        GameOverUI.SetActive(false);
+        //GameOverUI.SetActive(false);
     }
 
     /// <summary>
