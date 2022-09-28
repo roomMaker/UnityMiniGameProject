@@ -94,7 +94,10 @@ public class PlayerMove : MonoBehaviour
         _isJump = true;
         // 점프!
         _rigidbody.AddForce(Vector2.up * _jumpPower, ForceMode2D.Impulse);
-        _audioSource.Play();
+        if(false == _audioSource.isPlaying)
+        {
+            _audioSource.Play();
+        }
     }
 
     // 현재 플레이어의 점프 가능여부 처리
