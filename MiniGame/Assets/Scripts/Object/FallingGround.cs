@@ -6,6 +6,10 @@ public class FallingGround : MonoBehaviour
 {
     [SerializeField]
     private AudioSource _triggerSound;
+    private void Awake()
+    {
+        _triggerSound = GetComponent<AudioSource>();
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.CompareTag("Player"))
