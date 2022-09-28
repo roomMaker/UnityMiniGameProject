@@ -35,6 +35,7 @@ public class PlayerInput : MonoBehaviour
             GameManager.Instance.InActiveGameOverUI();
             GameManager.Instance.ResetScore();
             GameManager.Instance.ResetSound.Play();
+            GameManager.Instance.GameSceneIndex = 1;
             SceneManager.LoadScene(1);
         }
 
