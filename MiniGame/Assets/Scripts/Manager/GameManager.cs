@@ -35,8 +35,6 @@ public class GameManager : SingletonBehaviour<GameManager>
     public AudioSource DieSound;
     public AudioSource ResetSound;
 
-
-
     /// <summary>
     /// 플레이어 사망 함수
     /// </summary>

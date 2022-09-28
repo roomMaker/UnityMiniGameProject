@@ -41,15 +41,16 @@ public class PlayerInput : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.R) && GameManager.Instance.IsGameClear)
         {
+            GameManager.Instance.GameSceneIndex = 0;
             GameManager.Instance.IsGameClear = false;
             GameManager.Instance.CanMovePlayer = true;
-            GameManager.Instance.GameSceneIndex = 1;
             GameManager.Instance.ResetScore();
             SceneManager.LoadScene(0);
         }
 
         if (Input.GetKeyDown(KeyCode.R) && GameManager.Instance.IsPause)
         {
+            GameManager.Instance.GameSceneIndex = 0;
             GameManager.Instance.ActiveTutorial();
             GameManager.Instance.PauseOnOff();
             SceneManager.LoadScene(0);
