@@ -12,6 +12,8 @@ public class GameManager : SingletonBehaviour<GameManager>
     public bool IsTutorialOver;
 
     public bool IsGameOver;
+
+    public bool IsGameClear;
     
     public bool CanMovePlayer = true;
 
