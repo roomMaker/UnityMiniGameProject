@@ -34,15 +34,16 @@ public class PlayerInput : MonoBehaviour
             GameManager.Instance.CanMovePlayer = true;
             GameManager.Instance.InActiveGameOverUI();
             GameManager.Instance.ResetScore();
-            GameManager.Instance.GameSceneIndex = 1;
             GameManager.Instance.ResetSound.Play();
-            SceneManager.LoadScene(GameManager.Instance.GameSceneIndex);
+            SceneManager.LoadScene(1);
         }
 
         if(Input.GetKeyDown(KeyCode.R) && GameManager.Instance.IsGameClear)
         {
             GameManager.Instance.IsGameClear = false;
             GameManager.Instance.CanMovePlayer = true;
+            GameManager.Instance.GameSceneIndex = 1;
+            GameManager.Instance.ResetScore();
             SceneManager.LoadScene(0);
         }
 
