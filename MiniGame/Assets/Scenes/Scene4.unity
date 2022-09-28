@@ -3000,6 +3000,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2465570950460299027, guid: 5f6130d913cf4ef47941026209c0f642, type: 3}
+      propertyPath: FrogWaitSecond
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2465570950460299033, guid: 5f6130d913cf4ef47941026209c0f642, type: 3}
       propertyPath: m_Name
       value: Frog (1)

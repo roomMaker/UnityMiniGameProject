@@ -11,7 +11,6 @@ public class TitleUI : MonoBehaviour
         {
             Debug.Log("엔터키 입력!!");
             SceneManager.LoadScene("Scene1");
-            Time.timeScale = 0f;
         }
 
         if (Input.GetKeyDown(KeyCode.Escape))

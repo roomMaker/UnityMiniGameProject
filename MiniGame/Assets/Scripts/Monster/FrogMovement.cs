@@ -9,6 +9,8 @@ public class FrogMovement : MonoBehaviour
     // 개구리 이동 반경
     public float MoveRange = 4f;
 
+    public float FrogWaitSecond;
+
     // 컴포넌트
     private SpriteRenderer _spriteRenderer;
     private Rigidbody2D _rigidbody;
@@ -30,7 +32,7 @@ public class FrogMovement : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(4f);
+            yield return new WaitForSeconds(FrogWaitSecond);
             MoveRange *= -1;
             _spriteRenderer.flipX = !_spriteRenderer.flipX;
             _rigidbody.AddForce(new Vector2(MoveRange, JumpRange), ForceMode2D.Impulse);

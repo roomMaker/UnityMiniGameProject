@@ -63,7 +63,7 @@ public class GameManager : SingletonBehaviour<GameManager>
 
     IEnumerator PlayerDeadMove()
     {
-        Player.GetComponent<CapsuleCollider2D>().enabled = false;
+        Player.GetComponent<BoxCollider2D>().enabled = false;
         Player.GetComponent<Rigidbody2D>().drag = 10000f;
 
         yield return new WaitForSeconds(0.4f);
@@ -75,14 +75,23 @@ public class GameManager : SingletonBehaviour<GameManager>
         ActiveGameOverUI();
         IsGameOver = true;
     }
-
+    /// <summary>
+    /// 튜토리얼 UI 비활성화 함수
+    /// </summary>
     public void InActiveTutorial()
     {
-        Time.timeScale = 1f;
         IsTutorialOver = true;
         TutorialUI.SetActive(false);
     }
-    
+    /// <summary>
+    /// 튜토리얼 UI 활성화 함수
+    /// </summary>
+    public void ActiveTutorial()
+    {
+        IsTutorialOver = false;
+        TutorialUI.SetActive(true);
+    }
+
     /// <summary>
     /// 스코어 증가 및 설정 함수
     /// </summary>
@@ -132,14 +141,14 @@ public class GameManager : SingletonBehaviour<GameManager>
         IsPause = !IsPause;
         if(IsPause)
         {
+            CanMovePlayer = false;
             Time.timeScale = 0f;
         }
         else
         {
             Time.timeScale = 1f;
+            CanMovePlayer = true;
         }
         PauseUI.SetActive(IsPause);
     }
-
-
 }

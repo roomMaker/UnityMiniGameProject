@@ -46,7 +46,15 @@ public class PlayerInput : MonoBehaviour
             SceneManager.LoadScene(0);
         }
 
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.R) && GameManager.Instance.IsPause)
+        {
+            GameManager.Instance.ActiveTutorial();
+            GameManager.Instance.PauseOnOff();
+            SceneManager.LoadScene(0);
+        }
+
+
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             GameManager.Instance.PauseOnOff();
         }
