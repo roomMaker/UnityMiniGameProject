@@ -18,6 +18,7 @@ public class GameManager : SingletonBehaviour<GameManager>
     public bool IsPause;
     // 점수 UI 텍스트
     public Text ScoreText;
+    public Text BestScoreText;
     // 점수
     public int Score;
 
@@ -89,6 +90,14 @@ public class GameManager : SingletonBehaviour<GameManager>
     {
         Score += score;
         ScoreText.text = $"{Score}";
+    }
+    public void BestScore(int bestScore)
+    {
+        if(Score < bestScore)
+        {
+            bestScore = Score;
+            BestScoreText.text = $"{bestScore}";
+        }
     }
     /// <summary>
     /// 스코어 리셋 함수
