@@ -47,6 +47,7 @@ public class GameManager : SingletonBehaviour<GameManager>
         }
         CanMovePlayer = false;
 
+        DieSound.Play();
 
         Debug.Log("플레이어 사망!");
         
