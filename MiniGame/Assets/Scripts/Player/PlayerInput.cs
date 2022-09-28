@@ -39,6 +39,13 @@ public class PlayerInput : MonoBehaviour
             SceneManager.LoadScene(GameManager.Instance.GameSceneIndex);
         }
 
+        if(Input.GetKeyDown(KeyCode.R) && GameManager.Instance.IsGameClear)
+        {
+            GameManager.Instance.IsGameClear = false;
+            GameManager.Instance.CanMovePlayer = true;
+            SceneManager.LoadScene(0);
+        }
+
         if(Input.GetKeyDown(KeyCode.Escape))
         {
             GameManager.Instance.PauseOnOff();

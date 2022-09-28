@@ -7,15 +7,18 @@ public class InteractableBox : Interactable
 {
     // 게임클리어 이미지 삽입
     public Image GameClear_Image;
+    [SerializeField]
+    private AudioSource _InteractSound;
 
     // 상자 획득시 게임 클리어
     public override void ActivateObject()
     {
-        GameClear_Image.gameObject.SetActive(true);
-
-        if (Input.GetKeyDown(KeyCode.R))
+        if(!GameManager.Instance.IsGameClear)
         {
-            SceneManager.LoadScene("Title");
+            GameManager.Instance.IsGameClear = true;
+            GameManager.Instance.CanMovePlayer = false;
+            GameClear_Image.gameObject.SetActive(true);
+            _InteractSound.Play();
         }
     }
 }

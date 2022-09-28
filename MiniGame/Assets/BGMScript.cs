@@ -21,6 +21,13 @@ public class BGMScript : MonoBehaviour
 
     private void Update()
     {
+        if(GameManager.Instance.IsGameOver)
+        {
+            _changeMusic = false;
+            _changeMusic1 = false;
+            _changeMusic2 = false;
+        }
+
         if (GameManager.Instance.GameSceneIndex == 1 && _changeMusic == false)
         {
             BGMSource.clip = BGM[1];
