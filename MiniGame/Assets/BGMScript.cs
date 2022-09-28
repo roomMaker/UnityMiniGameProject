@@ -28,6 +28,18 @@ public class BGMScript : MonoBehaviour
             _changeMusic2 = false;
         }
 
+        if(GameManager.Instance.GameSceneIndex == 0)
+        {
+            BGMSource.Stop();
+            _changeMusic = false;
+            _changeMusic1 = false;
+            _changeMusic2 = false;
+            if(Input.GetKeyDown(KeyCode.Return))
+            {
+                GameManager.Instance.GameSceneIndex++;
+            }
+        }
+
         if (GameManager.Instance.GameSceneIndex == 1 && _changeMusic == false)
         {
             BGMSource.clip = BGM[1];
